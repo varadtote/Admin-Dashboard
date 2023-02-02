@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.grid-container{
+    height: 100vh;
+    width: 100vw; /* Workaround later for as divs increase it should scroll insted pf fitting the screen*/
+    display: grid;
+    grid-template-columns: 0.5fr 3fr;
+    grid-template-rows: 0.5fr 3fr;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar workspace"
+    ;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: skyblue;
+    padding: 15px;
+}
+.logo{
+    display: flex;
+
+}
+.utility-links li{
+    list-style: none;
+}
+.utility-links li a{
+    text-decoration: none;
+    color: white;
+}
+.utility-links img{
+    height: 40px;;
+}
+
+/* Header  */
+.header {
+    grid-area: header;   
+    background-color: aliceblue; 
+    padding: 5px;
+    justify-content: space-around;
+}
+
+.searchbar {
+    display: flex;
+    justify-content: space-around;
+}
+#profile-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+}
+.header-icons img{
+    height: 30px;
+}
+#search {
+    width: 500px;
+}
+.profile{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: burlywood; */
+    
+}
+
+.profileinfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#profile-img {
+    height: 40px;
+    border-radius: 50%;
+}
+
+#bigimg {
+    height: 60px;
+    border-radius: 50%;
+}
+
+.sidebar-buttons button{
+    padding: 5px;
+    background-color: skyblue;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Workspace */
+
+.workspace {
+    grid-area: workspace;
+    background-color: lightgray;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "projects Announcements"
+    "projects Trending"
+    ;
+    grid-gap: 5px;
+    padding: 10px;
+}
+
+.projects{
+    grid-area: projects;
+    background-color: tomato;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    /* grid-template-rows: 1fr 1fr; */
+    grid-gap: 5px;
+}
+.Announcements{
+    grid-area: Announcements;
+    background-color: blue;
+    padding: 10px;
+}
+.Trending{
+    grid-area: Trending;
+    background-color: gray;
+    padding: 10px;
+}
+
+.projects .items {
+    height: 150px;
+    background-color: white;
+}

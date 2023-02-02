@@ -5,35 +5,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
     <div class="grid-container">
+      <!-- <SidebAr> -->
       <div class="sidebar">
-        <div class="logo"><h1>Dashboard</h1></div>
-        <div class="ultility-links">
-            <li><a href="">Home</a></li>
-            <li><a href="">Profile</a></li>
-            <li><a href="">Messages</a></li>
-            <li><a href="">History</a></li>
-            <li><a href="">Tasks</a></li>
-            <li><a href="">Communities</a></li>
-            <li><a href="">Settings</a></li>
-            <li><a href="">Support</a></li>
-            <li><a href="">Privacy</a></li>
+        <div class="logo">
+          <div>
+            <img src="./assets/icons/dashboard.svg" alt="" />
+          </div>
+          <div>
+            <h1>Dashboard</h1>
+          </div>
+        </div>
+        <div class="utility-links">
+          <li>
+            <img src="./assets/icons/home.svg" alt="" /><a href="">Home</a>
+          </li>
+          <li>
+            <img src="./assets/icons/profile.svg" alt="" /><a href=""
+              >Profile</a
+            >
+          </li>
+          <li>
+            <img src="./assets/icons/message.svg" alt="" /><a href=""
+              >Messages</a
+            >
+          </li>
+          <li>
+            <img src="./assets/icons/history.svg" alt="" /><a href=""
+              >History</a
+            >
+          </li>
+          <li>
+            <img src="./assets/icons/tasks.svg" alt="" /><a href="">Tasks</a>
+          </li>
+          <li>
+            <img src="./assets/icons/coomunity.svg" alt="" /><a href=""
+              >Communities</a
+            >
+          </li>
+          <li>
+            <img src="./assets/icons/settings.svg" alt="" /><a href=""
+              >Settings</a
+            >
+          </li>
+          <li>
+            <img src="./assets/icons/support.svg" alt="" /><a href=""
+              >Support</a
+            >
+          </li>
+          <li>
+            <img src="./assets/icons/privacy.svg" alt="" /><a href=""
+              >Privacy</a
+            >
+          </li>
         </div>
       </div>
-      <div class="header">
-        <div class="searchbar">
-            
-            <input type="text">
-            <!-- ghanti icon -->
-            <!-- profile icon  -->
-            <h4>Morgan Oakley </h4>
+
+      </SidebAr>
+
+      <!-- <Header>  -->
+        <div class="header">
+          <div class="searchbar">
+            <div class="header-icons"><img src="./assets/icons/search.svg" alt="" /></div>
+            <div><input type="text" id="search"/></div>
+            <div class="header-icons"><img src="./assets/icons/bell_icon.svg" alt="" /></div>
+            <div id="profile-pic">
+              <img
+                src="./assets/profiles/fcat.avif"
+                alt=""
+                id="profile-img"
+              />
+              <h4>Morgan Oakley</h4>
+            </div>
+          </div>
+          <div class="profile">
+            <div class="profileinfo">
+            <div >
+              <img id="bigimg" src="./assets/profiles/fcat.avif" alt="" srcset="">
+            </div>
+            <div>
+              <p>Hi there,</p>
+              <h3>Moragn Oakley (@morgan)</h3>
+            </div>
+          </div>
+            <div class="sidebar-buttons">
+              <button>New</button>
+              <button>Upload</button>
+              <button>Share</button>
+            </div>
+          </div>
         </div>
-        <div class="profile"></div>
-      </div>
-      <div class="workspace">workspace</div>
+      <!-- </Header> -->
+
+      <!-- <Workspace> -->
+        <div class="workspace">
+          <div class="projects">
+            <!-- <div>  <h2>Your Projects</h2> </div> -->
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+          </div>
+          <div class="Announcements"></div>
+          <div class="Trending"></div>
+        </div>
+      <!-- </Workspace> -->
     </div>
   </body>
 </html>
