@@ -101,36 +101,72 @@
 
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 50% 50%;
     grid-template-areas: 
     "projects Announcements"
     "projects Trending"
     ;
     grid-gap: 5px;
     padding: 10px;
+    min-width: 0;
+    min-height: 0;
 }
 
 .projects{
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
     grid-area: projects;
     background-color: tomato;
     padding: 10px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    /* grid-template-rows: 1fr 1fr; */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr;
     grid-gap: 5px;
 }
+
+.incr {
+    grid-column: 1 / -1;
+}
 .Announcements{
+    height: 100%;
     grid-area: Announcements;
     background-color: blue;
     padding: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.Announcements div{
+    height: 25%;
+    overflow: hidden;
 }
 .Trending{
+    /* height: 70px; */
     grid-area: Trending;
-    background-color: gray;
+    background-color: rgb(201, 29, 29);
     padding: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
 }
 
 .projects .items {
-    height: 150px;
+    height: 250px;
     background-color: white;
+}
+
+
+.trendingusers {
+    display: flex;
+    background-color: red;
+    
+
+}
+.trendingusers img {
+    height: 5%;
+    border-radius: 50%;
 }
